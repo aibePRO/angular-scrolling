@@ -1,0 +1,13 @@
+<mat-list role="list">
+  <cdk-virtual-scroll-viewport
+    style="height:30vh"
+    itemSize="50"
+  >
+    <mat-list-item role="listitem" *cdkVirtualFor="let photo of photos$ | async">
+      <!-- <a [routerLink]="['/photo', photo.id]"> -->
+      <a>
+        <img [src]="photo.thumbnailUrl" alt="photo.title">
+      </a>
+    </mat-list-item>
+  </cdk-virtual-scroll-viewport>
+</mat-list>
